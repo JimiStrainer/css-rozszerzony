@@ -1,0 +1,160 @@
+#ukryty {
+    display: none;
+    
+}
+
+#kontener > .inner {
+    display: inline-block;
+    height: 300px;
+    width: 33%;
+    background-color: red;
+}
+
+#floated > .inner {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color: red;
+    float: left;
+/*
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+*/
+    transition: all 2s linear;
+                
+}
+/*  1.jakie wlasciwosci
+    2. jakis czas
+    3. efekty animacji
+    4. czas opownienia
+*/
+
+/* jesli animacja ma działać w dwie strony musi być ustawiona przed hoverem */
+
+#floated > .inner:hover {
+    width: 600px;
+    background-color: green;    
+}
+
+#floated > .clear {
+    clear: both;
+}
+
+#tlo {
+    height: 500px;
+    background: url("https://d-pt.ppstatic.pl/k/r/1/62/ce/5301e12023530_p.jpg?1455631396") no-repeat;
+    
+/*    kiedy dla background-position nie ustawwiamy drugiej wartości, jest ona ustawiona na "center. Pierwsza wartość zawsze odnosi się do ox    */
+    background-position: center;
+    background-size: 800px;
+}
+/* url() - dodaje obrazek jako tło */
+
+
+#przepelnienie { 
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #000;
+    overflow: scroll;
+
+}
+
+/* transform */
+
+#rotacja,
+#przesuniecie,
+.klasa,
+#skalowanie,
+#animowany {
+    background: url("https://img.besty.pl/images/314/54/3145423_000.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    transition: all 1s;
+    
+}
+
+#rotacja:hover {
+    transform: rotate(360deg);
+}
+
+#przesuniecie:hover {
+    transform: translate(50%,50%);
+}
+
+.klasa:hover {
+    transform: rotate(45deg);
+    transform-origin: 20% 40%;
+}
+
+#skalowanie:hover {
+    transform: matrix(0.586,0.8,-0.8,0.586,40,20);
+}
+
+#animowany {
+    animation-name: rotuj;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* animacje */
+
+@keyframes rotuj {
+/*
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+*/
+    
+    0% {
+        transform:rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
